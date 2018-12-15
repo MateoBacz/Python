@@ -6,3 +6,4 @@ for elem in a:
         List.append(elem)
 
 print (List)
+print ("done")
