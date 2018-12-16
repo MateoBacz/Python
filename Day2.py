@@ -285,3 +285,9 @@ cel = list(range(-20,45,5))
 for x in range(-20,45,5):
     print(x,"C",(x * 1.8) +32, "F")
 
+# sformatować na jutro żeby ciągi tekstu były koło siebie, żeby powstała tabelka.
+for x in range(1,11):
+    for y in range(1,11):
+        print (x*y)
+    print("\n")
+print(x*y)
