@@ -291,3 +291,54 @@ for x in range(1,11):
         print (x*y)
     print("\n")
 print(x*y)
+
+###### tabliczka mnożenia
+for x in range(1, 11):
+        for y in range(1, 11):
+            z = x * y
+            print(z, end="\t")
+        print()
+
+        # lista a i dodać nową listę z elementami >3 z listy a
+        a = [1, 2, 3, 4, 5]
+        new_list = []
+        for elem in a:
+            if elem > 3:
+                new_list.append(elem)
+            else:
+                pass
+        print(new_list)
+
+        print([elem for elem in a if elem > 3])  # to samo w jednej linii
+
+        a = [1, 2, 3, 4, 5]
+        new_list = []
+
+        for elem in a:
+            new_list.append(elem * 2)
+        print(new_list)
+
+        print([elem * 2 for elem in a])
+
+        # P56 DZIEKANAT
+        oceny = [2, 3, 3.5, 4, 4.5, 5]
+        wprowadzone = []
+        suma = 0
+
+        while 1 == 1:
+            ocena = input("wprowadz ocene")
+            if ocena == "":  # jak użytkownik wciśnie sam enter
+                for ocena in wprowadzone:
+                    suma = suma + ocena
+                break
+            else:
+                try:  # try wstawia sie kiedy jest możliwość że użytkownik wprowadzi błąd, potem wprowadza się except żeby wyskakiwało że coś źle zrobiono
+                    ocena = float(ocena)
+                    if ocena in oceny:
+                        wprowadzone.append(ocena)
+                    else:
+                        print("nie ma takiej oceny!")
+                except:
+                    print("bledna wartosc")
+
+        print('Średnia ocen: %4.1f' % (suma / len(wprowadzone)))  # f liczba z przecinkiem 1 miejsce po przecinku
